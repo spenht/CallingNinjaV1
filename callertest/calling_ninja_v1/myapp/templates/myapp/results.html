@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Results</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Phone Number</th>
+        <th>Call Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for call in calls %}
+        <tr>
+          <td>{{ call.phone_number }}</td>
+          <td>{{ call.call_date }}</td>
+          <td>{{ call.status }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
